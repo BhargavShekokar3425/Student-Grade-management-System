@@ -1,119 +1,94 @@
-🎓 Student Grade Management Program
+# 🎓 Student Grade Management Program  
 
-A simple and efficient program to manage student records, calculate CGPA (Cumulative Grade Point Average), and determine departmental ranks. The program allows users to enter, store, retrieve, and analyze student data while ensuring easy interaction through a user-friendly menu.
+A simple and efficient program to manage student records, calculate **CGPA (Cumulative Grade Point Average)**, and determine **departmental ranks**. The program allows users to enter, store, retrieve, and analyze student data while ensuring easy interaction through a user-friendly menu.  
 
-✨ Features
+---
 
-Student Details Management
+## ✨ Features  
 
-Store information such as roll number, name, department, study year, completed semesters, subjects, credits, and grades.
+- **Student Details Management**  
+  - Store information such as roll number, name, department, study year, completed semesters, subjects, credits, and grades.  
 
-Automatic CGPA Calculation
+- **Automatic CGPA Calculation**  
+  - Computes CGPA based on subject grades and credits entered by the user.  
 
-Computes CGPA based on subject grades and credits entered by the user.
+- **Departmental Ranking**  
+  - Assigns ranks to students within their department based on CGPA.  
 
-Departmental Ranking
+- **Data Storage**  
+  - Saves all student details to a CSV file (`Student.csv`) for persistence and future reference.  
 
-Assigns ranks to students within their department based on CGPA.
+- **User-Friendly Interface**  
+  - Step-by-step prompts and clear instructions for easy use.  
 
-Data Storage
+---
 
-Saves all student details to a CSV file (Student.csv) for persistence and future reference.
+## 🚀 How to Use  
 
-User-Friendly Interface
+### 1. Welcome Screen  
+When executed, the program displays a **welcome message** introducing its functionalities and guidelines for entering data.  
 
-Step-by-step prompts and clear instructions for easy use.
+### 2. Menu Options  
+The program provides the following options:  
 
-🚀 How to Use
-1. Welcome Screen
+1. **Enter Student Details**  
+   - Add a new student record with the following format:  
+     - **Roll Number**: Unique 4-digit ID  
+     - **Name**: Format → `<FirstName>_<LastName>`  
+       - Example: `Bhargav_Shekokar`, `Patel_Darsh`, `Nayan_Kute`  
+     - **Department Codes**:  
+       - `cs` → Computer Science and Engineering  
+       - `ee` → Electrical Engineering  
+       - `cm` → Computational Mathematics  
+       - `me` → Mechanical Engineering  
+       - `ch` → Chemical Engineering  
+       - `bb` → Bioscience and Bioengineering  
+       - `ci` → Civil and Infrastructure Engineering  
+       - `ph` → B.S. Physics  
+       - `cy` → B.S. Chemistry  
+       - `mt` → Materials Engineering  
+     - **Study Year** & **Completed Semesters**  
+     - **Subjects** → For each subject, enter:  
+       - Credits offered by the institute  
+       - Grade (out of 10) obtained by the student  
 
-When executed, the program displays a welcome message introducing its functionalities and guidelines for entering data.
+2. **Display Student Details**  
+   - Retrieve and display a student’s information by entering their roll number.  
 
-2. Menu Options
+3. **Display Departmental Ranks**  
+   - View departmental rankings based on CGPA.  
 
-The program provides the following options:
+4. **Exit**  
+   - Saves all student data into `Student.csv` and exits the program.  
 
-Enter Student Details
+---
 
-Add a new student record with the following format:
+## 📊 CGPA Calculation  
+The CGPA is automatically computed using the formula:  
 
-Roll Number: Unique 4-digit ID
+\[
+\text{CGPA} = \frac{\sum (\text{Credits} \times \text{Grade})}{\sum (\text{Credits})}
+\]
 
-Name: Format → <FirstName>_<LastName>
+---
 
-Example: Bhargav_Shekokar, Patel_Darsh, Nayan_Kute
+## 🏅 Departmental Ranks  
+- After data entry, students are ranked **within their department** based on their CGPA.  
+- The program dynamically updates ranks whenever new data is added.  
 
-Department Codes:
+---
 
-cs → Computer Science and Engineering
+## 💾 Data Storage  
+- All student details are stored in a file named **`Student.csv`**.  
+- The file can be reused across multiple sessions for maintaining records.  
 
-ee → Electrical Engineering
+---
 
-cm → Computational Mathematics
+## 🔚 Exiting the Program  
+- On choosing **Exit**, the program saves all records and terminates gracefully.  
 
-me → Mechanical Engineering
+---
 
-ch → Chemical Engineering
-
-bb → Bioscience and Bioengineering
-
-ci → Civil and Infrastructure Engineering
-
-ph → B.S. Physics
-
-cy → B.S. Chemistry
-
-mt → Materials Engineering
-
-Study Year & Completed Semesters
-
-Subjects → For each subject, enter:
-
-Credits offered by the institute
-
-Grade (out of 10) obtained by the student
-
-Display Student Details
-
-Retrieve and display a student’s information by entering their roll number.
-
-Display Departmental Ranks
-
-View departmental rankings based on CGPA.
-
-Exit
-
-Saves all student data into Student.csv and exits the program.
-
-📊 CGPA Calculation
-
-The CGPA is automatically computed using the formula:
-
-CGPA
-=
-∑
-(
-Credits
-×
-Grade
-)
-∑
-(
-Credits
-)
-CGPA=
-∑(Credits)
-∑(Credits×Grade)
-	​
-
-🏅 Departmental Ranks
-
-After data entry, students are ranked within their department based on their CGPA.
-
-The program dynamically updates ranks whenever new data is added.
-
-💾 Data Storage
-
-All student details are stored in a file named Student.csv.
-
-The file can be reused across multiple sessions for maintaining records.
+## ⚙️ Requirements  
+- Python 3.x  
+- CSV module (built-in)  
